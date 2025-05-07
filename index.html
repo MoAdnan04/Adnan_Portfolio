@@ -8,96 +8,241 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<header>
-  <div class="container">
-    <h1>Mohammad Adnan</h1>
-    <p>CRM Manager | Business Analyst | Digital Marketer</p>
-    <a href="mailto:adnan200204@gmail.com" class="btn">Contact Me</a>
-  </div>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammad Adnan Portfolio</title>
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
 
-<nav>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    header {
+      background: #004c99;
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+    }
 
-<section id="about" class="container">
-  <h2>About Me</h2>
-  <p>I am a detail-oriented IT professional with a strong background in product development, CRM management, and digital marketing. Passionate about business analysis and optimizing processes through technology and teamwork.</p>
-</section>
+    header .btn {
+      background: #ffa500;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: transform 0.3s;
+    }
 
-<section id="experience" class="container">
-  <h2>Professional Experience</h2>
-  <div class="job">
-    <h3>CRM Manager | Hike Education Pvt Ltd</h3>
-    <span>June 2023 – Present</span>
+    header .btn:hover {
+      transform: scale(1.05);
+    }
+
+    nav {
+      background: #222;
+      padding: 0.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+    }
+
+    nav ul li a:hover {
+      background: #555;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section.container {
+      background: #f9f9f9;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 76, 153, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section.container:hover {
+      transform: scale(1.01);
+      box-shadow: 0 6px 18px rgba(0, 76, 153, 0.15);
+    }
+
+    h2 {
+      color: #004c99;
+      transition: transform 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+    }
+
+    h2:hover {
+      transform: scale(1.05);
+      color: #003366;
+    }
+
+    p, li, .skills-list span {
+      transition: transform 0.3s ease, background 0.3s ease;
+      cursor: default;
+    }
+
+    p:hover, li:hover, .skills-list span:hover {
+      transform: scale(1.02);
+      background: #e0f0ff;
+    }
+
+    .job {
+      margin-bottom: 1.5rem;
+    }
+
+    .skills-list span {
+      display: inline-block;
+      background: #e6f2ff;
+      color: #004c99;
+      padding: 0.5rem 1rem;
+      margin: 0.3rem;
+      border-radius: 20px;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="https://i.ibb.co/Wpjy99jz/profile.jpg" alt="Mohammad Adnan" class="profile-pic">
+      <div class="header-text">
+        <h1>Mohammad Adnan</h1>
+        <p>CRM Manager | Business Analyst | Digital Marketer</p>
+        <a href="mailto:adnan200204@gmail.com" class="btn">Contact Me</a>
+      </div>
+    </div>
+  </header>
+
+  <nav>
     <ul>
-      <li>Managed and customized LeadSquared and Salesforce CRM software, implementing tailored automation and
-optimization strategies to enhance business processes.</li>
-      <li>Successfully integrated Salesforce custom objects, workflows, and automation rules, improving data accuracy and
-sales team efficiency by 35%.</li>
-      <li>Led CRM enhancements, including chatbot integration, automated lead scoring, and pipeline tracking, resulting in
-a 40% improvement in process efficiency and a 30% increase in user adoption.</li>
-      <li>Defined and documented over 30 critical business requirements, ensuring system modifications aligned with
-organizational objectives, boosting stakeholder satisfaction by 15%.</li>
-      <li>Collaborated cross-functionally with sales, marketing, and operations teams to configure Salesforce dashboards,
-reports, and custom fields, enhancing real-time data insights.</li>
-      <li>Led a team of four, delegating tasks effectively and managing projects to ensure successful CRM improvements
-and seamless integrations, significantly boosting organizational efficiency.</li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-  </div>
-  <div class="job">
-    <h3>Business Analyst | AlignTogether Solutions Pvt. Ltd.</h3>
-    <span>May 2022 – Oct 2022</span>
+  </nav>
+
+  <section id="about" class="container" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>I am a detail-oriented IT professional with a strong background in product development, CRM management, and digital marketing. Passionate about business analysis and optimizing processes through technology and teamwork.</p>
+  </section>
+
+  <section id="experience" class="container" data-aos="fade-up" data-aos-delay="100">
+    <h2>Professional Experience</h2>
+    <div class="job">
+      <h3>CRM Manager | Hike Education Pvt Ltd</h3>
+      <span>June 2023 – Present</span>
+      <ul>
+        <li>Managed and customized LeadSquared and Salesforce CRM software...</li>
+        <li>Successfully integrated Salesforce custom objects, workflows, and automation rules...</li>
+        <li>Led CRM enhancements including chatbot integration...</li>
+        <li>Defined and documented over 30 critical business requirements...</li>
+        <li>Collaborated cross-functionally with sales, marketing, and operations teams...</li>
+        <li>Led a team of four to manage CRM improvements and integrations...</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Business Analyst | AlignTogether Solutions Pvt. Ltd.</h3>
+      <span>May 2022 – Oct 2022</span>
+      <ul>
+        <li>Managed over 4 client accounts, developed 6+ customized CRM accounts...</li>
+        <li>Authored 6+ BRDs, 3+ FRDs, and 15+ promotional content pieces...</li>
+        <li>Improved SEO and reduced issues by executing automation scripts...</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills" class="container" data-aos="fade-up" data-aos-delay="200">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <span>CRM Systems: LeadSquared, Salesforce</span>
+      <span>Digital Marketing: SEO, SEM, Content Creation</span>
+      <span>Business Analysis: BRD, FRD</span>
+      <span>Technical: HTML, CSS, Microsoft Office, Figma</span>
+      <span>Project Management: Agile, Waterfall</span>
+      <span>Soft Skills: Communication, Leadership, Time Management</span>
+    </div>
+  </section>
+
+  <section id="certifications" class="container" data-aos="fade-up" data-aos-delay="300">
+    <h2>Certifications</h2>
     <ul>
-      <li>Managed over 4 client accounts, developed 6+ customized LeadSquared CRM accounts, and executed 5+ digital
-marketing campaigns, leading to a 25% increase in client engagement and a 30% improvement in CRM efficiency.</li>
-      <li>Authored 6+ Business Requirement Documents (BRD), 3+ Functional Requirement Documents (FRD), and
-produced 15+ pieces of promotional content, enhancing client satisfaction and project clarity.</li>
-      <li>Increased website reach by 70% through effective SEO strategies and reduced user-reported issues by 20% by
-executing over 10 automation scripts and conducting 15+ rounds of website testing, improving the overall user
-experience.</li>
+      <li>Digital Marketing Certification | Hubspot</li>
+      <li>SEO Certification | Hubspot</li>
+      <li>LeadSquared Admin Certification | LeadSquared</li>
+      <li>Project Manager Certified | Udemy</li>
     </ul>
-  </div>
-</section>
+  </section>
 
-<section id="skills" class="container">
-  <h2>Skills</h2>
-  <div class="skills-list">
-    <span>CRM Systems: LeadSquared, Salesforce</span>
-    <span>Digital Marketing: SEO, SEM, Content Creation</span>
-    <span>Business Analysis: BRD, FRD</span>
-    <span>Technical: HTML, CSS, Microsoft Office, Figma</span>
-    <span>Project Management: Agile, Waterfall</span>
-    <span>Soft Skills: Communication, Leadership, Time Management</span>
-  </div>
-</section>
+  <section id="contact" class="container" data-aos="fade-up" data-aos-delay="400">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:adnan200204@gmail.com">adnan200204@gmail.com</a></p>
+    <p>Phone: 8962889499</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/adnan-mohammad-a121581b8" target="_blank">Profile</a></p>
+  </section>
 
-<section id="certifications" class="container">
-  <h2>Certifications</h2>
-  <ul>
-    <li>Digital Marketing Certification | Hubspot</li>
-    <li>SEO Certification | Hubspot</li>
-    <li>LeadSquared Admin Certification | LeadSquared</li>
-    <li>Project Manager Certified | Udemy</li>
-  </ul>
-</section>
+  <footer>
+    <p>&copy; 2025 Mohammad Adnan. All rights reserved.</p>
+  </footer>
 
-<section id="contact" class="container">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:adnan200204@gmail.com">adnan200204@gmail.com</a></p>
-  <p>Phone: 8962889499</p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/adnan-mohammad-a121581b8" target="_blank">Profile</a></p>
-</section>
+  <!-- AOS Library JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 
-<footer>
-  <p>&copy; 2025 Mohammad Adnan. All rights reserved.</p>
-</footer>
+  <!-- Smooth Scroll for anchor links -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
+</body>
+</html>
 <!-- partial -->
   <script  src="./script.js"></script>
 

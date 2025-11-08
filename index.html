@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohammad Adnan Portfolio</title>
-  <!-- AOS Library -->
-  <link href="https://postimg.cc/D8FbTHyV" rel="stylesheet">
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
+    /* =========================
+       Global Styles
+    ========================== */
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      color: #333;
+      color: #f0f0f0;
+      background-color: #0a0a0a;
       line-height: 1.6;
     }
 
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #1affb2;
+    }
+
+    /* =========================
+       Header Section
+    ========================== */
     header {
-      background: #004c99;
+      background: linear-gradient(135deg, #000000, #111111, #1a1a1a);
       color: #fff;
       padding: 4rem 0;
       text-align: center;
@@ -37,53 +53,52 @@
       height: 180px;
       object-fit: cover;
       border-radius: 50%;
-      border: 4px solid #fff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      border: 4px solid #00ffcc;
+      box-shadow: 0 0 25px #00ffcc;
       margin-bottom: 1rem;
       animation: zoomIn 1.2s ease forwards;
     }
 
-    .header-text {
-      text-align: center;
-      color: white;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: slideUp 1s ease forwards;
-      animation-delay: 0.8s;
-    }
-
     .header-text h1 {
-      margin: 0.5rem 0;
-      font-size: 2.2rem;
+      font-size: 2.4rem;
+      color: #00ffcc;
     }
 
     .header-text p {
-      color: #f0f0f0;
+      color: #ccc;
       font-weight: 500;
       margin-bottom: 1rem;
       font-size: 1.1rem;
     }
 
-    header .btn {
-      background: #ffa500;
-      color: #fff;
-      padding: 0.6rem 1.2rem;
+    .btn {
+      background: #00ffcc;
+      color: #000;
+      padding: 0.7rem 1.4rem;
       text-decoration: none;
       border-radius: 25px;
       font-weight: bold;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(255, 165, 0, 0.4);
+      box-shadow: 0 0 15px #00ffcc;
     }
 
-    header .btn:hover {
-      background: #e69500;
+    .btn:hover {
+      background: #00cca3;
       transform: scale(1.05);
-      box-shadow: 0 6px 18px rgba(255, 165, 0, 0.5);
+      box-shadow: 0 0 25px #00ffcc;
     }
 
+    /* =========================
+       Navigation
+    ========================== */
     nav {
-      background: #333;
+      background: #111;
+      border-top: 2px solid #00ffcc;
+      border-bottom: 2px solid #00ffcc;
       padding: 0.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     nav ul {
@@ -95,93 +110,106 @@
     }
 
     nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
+      color: #f0f0f0;
+      padding: 0.6rem 1.2rem;
+      font-weight: 500;
+      transition: color 0.3s ease, background 0.3s ease;
     }
 
     nav ul li a:hover {
-      background: #555;
+      background: #00ffcc;
+      color: #000;
+      border-radius: 8px;
     }
 
+    /* =========================
+       Container & Sections
+    ========================== */
     .container {
       max-width: 1000px;
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 2rem;
+      background: #141414;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 255, 204, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 40px rgba(0, 255, 204, 0.2);
     }
 
     h2 {
-      color: #004c99;
-      transition: transform 0.3s ease, color 0.3s ease;
+      color: #00ffcc;
+      border-bottom: 2px solid #00ffcc;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
     }
 
-    h2:hover {
-      transform: scale(1.05);
-      color: #003366;
+    ul {
+      list-style: disc;
+      margin-left: 1.5rem;
     }
 
-    .job {
+    /* =========================
+       Skills Section
+    ========================== */
+    .skills-category {
       margin-bottom: 1.5rem;
+    }
+
+    .skills-category h3 {
+      color: #00ffcc;
+      margin-bottom: 0.8rem;
     }
 
     .skills-list span {
       display: inline-block;
-      background: #e6f2ff;
-      color: #004c99;
+      background: #1a1a1a;
+      color: #00ffcc;
       padding: 0.5rem 1rem;
       margin: 0.3rem;
       border-radius: 20px;
+      border: 1px solid #00ffcc;
+      box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
     }
 
+    /* =========================
+       Projects Section
+    ========================== */
+    .project {
+      margin-bottom: 1.5rem;
+    }
+
+    .project h3 {
+      color: #00e6b8;
+    }
+
+    .project p {
+      color: #ccc;
+    }
+
+    /* =========================
+       Footer
+    ========================== */
     footer {
-      background: #333;
-      color: #fff;
+      background: #000;
+      color: #00ffcc;
       text-align: center;
       padding: 1rem 0;
       margin-top: 2rem;
+      border-top: 1px solid #00ffcc;
     }
 
     @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: scale(0.98);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
     }
 
     @keyframes zoomIn {
-      0% {
-        opacity: 0;
-        transform: scale(0.5);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    @keyframes slideUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    section.container {
-      background: #f9f9f9;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 76, 153, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    section.container:hover {
-      transform: scale(1.01);
-      box-shadow: 0 6px 18px rgba(0, 76, 153, 0.15);
+      from { opacity: 0; transform: scale(0.5); }
+      to { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
@@ -197,11 +225,11 @@
     </div>
   </header>
 
-
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -210,78 +238,124 @@
 
   <section id="about" class="container" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>I am a detail-oriented IT professional with a strong background in product development, CRM management, and digital marketing. Passionate about business analysis and optimizing processes through technology and teamwork.</p>
+    <p>I am a detail-oriented IT professional with a strong background in product development, CRM management, and digital marketing. Passionate about business analysis, automation, and optimizing processes to improve organizational efficiency through technology.</p>
   </section>
 
-  <section id="experience" class="container" data-aos="fade-up" data-aos-delay="100">
+  <section id="experience" class="container" data-aos="fade-up">
     <h2>Professional Experience</h2>
     <div class="job">
       <h3>CRM Manager | Hike Education Pvt Ltd</h3>
       <span>June 2023 – Present</span>
       <ul>
-        <li>Managed and customized LeadSquared and Salesforce CRM software, implementing tailored automation and
-optimization strategies to enhance business processes.</li>
-        <li>Successfully integrated Salesforce custom objects, workflows, and automation rules, improving data accuracy and sales team efficiency by 35%.</li>
-        <li>Led CRM enhancements, including chatbot integration, automated lead scoring, and pipeline tracking, resulting in a 40% improvement in process efficiency and a 30% increase in user adoption.</li>
-        <li>Defined and documented over 30 critical business requirements, ensuring system modifications aligned with
-organizational objectives, boosting stakeholder satisfaction by 15%.</li>
-        <li>Collaborated cross-functionally with sales, marketing, and operations teams to configure Salesforce dashboards, reports, and custom fields, enhancing real-time data insights.</li>
-        <li>Led a team of four, delegating tasks effectively and managing projects to ensure successful CRM improvements and seamless integrations, significantly boosting organizational efficiency.</li>
+        <li>Implemented and managed Salesforce & LeadSquared CRM systems, automating lead flows and sales tracking.</li>
+        <li>Improved team efficiency by 35% through workflow optimization and process automation.</li>
+        <li>Integrated chatbot systems, lead scoring models, and dashboards for performance insights.</li>
+        <li>Collaborated with cross-functional teams ensuring alignment between business needs and CRM structure.</li>
       </ul>
     </div>
+
     <div class="job">
       <h3>Business Analyst | AlignTogether Solutions Pvt. Ltd.</h3>
       <span>May 2022 – Oct 2022</span>
       <ul>
-        <li>Managed over 4 client accounts, developed 6+ customized LeadSquared CRM accounts, and executed 5+ digital marketing campaigns, leading to a 25% increase in client engagement and a 30% improvement in CRM efficiency.</li>
-        <li>Authored 6+ Business Requirement Documents (BRD), 3+ Functional Requirement Documents (FRD), and
-produced 15+ pieces of promotional content, enhancing client satisfaction and project clarity.</li>
-        <li>Increased website reach by 70% through effective SEO strategies and reduced user-reported issues by 20% by executing over 10 automation scripts and conducting 15+ rounds of website testing, improving the overall user
-experience.</li>
+        <li>Handled 4+ client projects including CRM implementation and digital campaign strategy.</li>
+        <li>Created BRDs & FRDs, improving project clarity and reducing rework by 20%.</li>
+        <li>Optimized web SEO, improving traffic by 70% and reducing issues through QA automation.</li>
       </ul>
     </div>
   </section>
 
-  <section id="skills" class="container" data-aos="fade-up" data-aos-delay="200">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <span>CRM Systems: LeadSquared, Salesforce</span>
-      <span>Digital Marketing: SEO, SEM, Content Creation</span>
-      <span>Business Analysis: BRD, FRD</span>
-      <span>Technical: HTML, CSS, Microsoft Office, Figma</span>
-      <span>Project Management: Agile, Waterfall</span>
-      <span>Soft Skills: Communication, Leadership, Time Management</span>
+  <section id="projects" class="container" data-aos="fade-up">
+    <h2>Key Projects</h2>
+
+    <div class="project">
+      <h3>Lead Automation System (LeadSquared + Salesforce)</h3>
+      <p>Developed an automated lead distribution and nurturing system integrated with Salesforce. Reduced manual data handling by 50% and improved conversion tracking accuracy by 35%.</p>
+    </div>
+
+    <div class="project">
+      <h3>CRM Optimization & Reporting Dashboard</h3>
+      <p>Built performance dashboards and automated reports for sales, marketing, and operations teams using Salesforce Analytics. Enabled data-driven decision-making and saved 10+ weekly reporting hours.</p>
+    </div>
+
+    <div class="project">
+      <h3>Digital Marketing & CRM Integration Project</h3>
+      <p>Integrated HubSpot campaigns with LeadSquared CRM, enabling seamless lead tracking from campaigns to conversions, resulting in a 40% boost in lead conversion efficiency.</p>
     </div>
   </section>
 
-  <section id="certifications" class="container" data-aos="fade-up" data-aos-delay="300">
+  <section id="skills" class="container" data-aos="fade-up">
+    <h2>Skills</h2>
+
+    <div class="skills-category">
+      <h3>Technical Skills</h3>
+      <div class="skills-list">
+        <span>LeadSquared</span>
+        <span>Salesforce</span>
+        <span>HTML & CSS</span>
+        <span>Figma</span>
+        <span>Microsoft Office</span>
+      </div>
+    </div>
+
+    <div class="skills-category">
+      <h3>Analytical Skills</h3>
+      <div class="skills-list">
+        <span>Business Requirement Documentation (BRD)</span>
+        <span>Functional Requirement Documentation (FRD)</span>
+        <span>Data Analysis</span>
+        <span>Process Optimization</span>
+      </div>
+    </div>
+
+    <div class="skills-category">
+      <h3>Managerial Skills</h3>
+      <div class="skills-list">
+        <span>Project Management</span>
+        <span>Agile Methodology</span>
+        <span>Team Leadership</span>
+        <span>Cross-Functional Collaboration</span>
+      </div>
+    </div>
+
+    <div class="skills-category">
+      <h3>Soft Skills</h3>
+      <div class="skills-list">
+        <span>Communication</span>
+        <span>Problem Solving</span>
+        <span>Adaptability</span>
+        <span>Time Management</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="container" data-aos="fade-up">
     <h2>Certifications</h2>
     <ul>
-      <li>Digital Marketing Certification | Hubspot</li>
-      <li>SEO Certification | Hubspot</li>
-      <li>LeadSquared Admin Certification | LeadSquared</li>
-      <li>Project Manager Certified | Udemy</li>
+      <li>Digital Marketing Certification | <a href="#" target="_blank">View</a></li>
+      <li>SEO Certification | <a href="#" target="_blank">View</a></li>
+      <li>LeadSquared Admin Certification | <a href="#" target="_blank">View</a></li>
+      <li>Project Manager Certified | <a href="#" target="_blank">View</a></li>
     </ul>
   </section>
 
-  <section id="contact" class="container" data-aos="fade-up" data-aos-delay="400">
+  <section id="contact" class="container" data-aos="fade-up">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:adnan200204@gmail.com">adnan200204@gmail.com</a></p>
     <p>Phone: 8962889499</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/adnan-mohammad-a121581b8" target="_blank">Profile</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/adnan-mohammad-a121581b8" target="_blank">View Profile</a></p>
   </section>
 
   <div style="text-align: center; margin-bottom: 2rem;">
-    <a href="resume.pdf" download class="btn" style="background: #28a745; color: #fff; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold;">
-      Download My Resume
-    </a>
+    <a href="resume.pdf" target="_blank" class="btn" style="margin-right: 10px;">Quick View Resume</a>
+    <a href="resume.pdf" download class="btn" style="background: #00e6b8;">Download Resume</a>
   </div>
 
   <footer>
     <p>&copy; 2025 Mohammad Adnan. All rights reserved.</p>
   </footer>
 
-  <!-- AOS Library JS -->
+  <!-- AOS Animation Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
@@ -290,7 +364,7 @@ experience.</li>
     });
   </script>
 
-  <!-- Smooth Scroll for anchor links -->
+  <!-- Smooth Scroll Script -->
   <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener("click", function(e) {
